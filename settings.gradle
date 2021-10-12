@@ -1,0 +1,2 @@
+rootProject.name = "hook-binder-sample"
+include ':app'

@@ -32,7 +32,7 @@ class HookBinderHelper {
                 val stubBinder = Proxy.newProxyInstance(
                     serviceManagerClass.classLoader,
                     arrayOf(IBinder::class.java),
-                    StubIBinder(rawBinder)
+                    StubIBinderProxy(rawBinder)
                 ) as? IBinder
 
                 val cache = (serviceManagerClass.getDeclaredField("sCache").apply {

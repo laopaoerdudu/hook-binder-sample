@@ -5,7 +5,7 @@ import java.lang.reflect.InvocationHandler
 import java.lang.reflect.Method
 import java.lang.reflect.Proxy
 
-class StubIBinder(private val binder: IBinder?) : InvocationHandler {
+class StubIBinderProxy(private val binder: IBinder?) : InvocationHandler {
     private var stub: Class<out Any>? = null
     private var mInterface: Class<out Any>? = null // android.content.IClipboard
 

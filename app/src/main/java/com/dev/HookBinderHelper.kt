@@ -23,7 +23,7 @@ class HookBinderHelper {
             try {
                 val serviceManagerClass = Class.forName("android.os.ServiceManager")
 
-                // ServiceManager里面管理的 Clipboard Binder对象
+                // ServiceManager里面管理的原始 Clipboard Binder 对象
                 val rawBinder = serviceManagerClass
                     .getDeclaredMethod("getService", String::class.java).apply {
                         isAccessible = true
